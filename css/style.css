@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body{
+	background-image: url('../assets/mainBG.jpg');
+	background-size: cover;
+	margin: 0;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .login-page{
+	background-image: url('../assets/loginBG.png');
+	background-size: cover;
+	color: #ddd;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	width: 800px;
+	height: 500px;
+	background-color: #fff;
+	border-style: inset;
+	border-width: 10px;
+	border-color: #333;
+	display: flex;
+}
+
+.app > .login-page > img{
+	position: absolute;
+	margin-top: -160px;
+	margin-left: 50px;
+	width: 700px;
+	height: 200px;
+}
+
+.app > .login-page > div{
+	width: 50%;
+	text-align: center;
+}
+
+.app > .login-page > div > h2{
+	margin-top: 30px;
+}
+
+.app > .login-page > div > div > input{
+	margin-top: 15px;
+	padding: 10px;
+	height: 30px;
+	width: 80%;
+	border-style: inset;
+	background-color: #222;
+	color: #ddd;
+	border-color: #111;
+	border-width: 7px;
+	font-size: 17px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .login-page > div > div > button{
+	border-style: outset;
+	border-color: #666;
+	background-color: #333;
+	color: #888;
+	margin-top: 20px;
+	height: 50px;
+	width: 80%;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .main-page{
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-color: #33333390;
+}
+
+.app > .main-page > .title{
+	margin-top: 80px;
+	margin-left: 30px;
+	display: flex;
+}
+
+.app > .main-page > .title > .menu{
+	position: absolute;
+	margin-left: 70%;
+	height: 50px;
+	width: 125px;
+}
+
+.app > .main-page > .title > .menu > button{
+	border-style: outset;
+	color: #eee;
+	background-color: #ffd633;
+	border-color: #e6b800;
+	border-width: 5px;
+	margin-top: 20px;
+	height: 50px;
+	width: 125px;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .main-page > .title > h1{
+	color: #eee;
+	margin-left: 15px;
+}
+
+.app > .main-page > div{
+	margin-top: -280px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	height: 400px;
+	display: flex;
+}
+
+.app > .main-page > div > div{
+	margin-left: 100px;
+	text-align: center;
+	width: 200px;
+	height: 100%;
+	cursor: pointer;
+	color: #eee;
+}
+
+.app > .main-page > div > .game > i{
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+.app > .main-page > div > .game:hover{
+	font-size: 20px;
+	width: 240px;
+	height: 108%;
+}
+
+.app > .main-page > div > .lobby{
+	background-image: url('../assets/lobbyBanner.jpg');
+	background-blend-mode: darken;
+	background-size: cover;
+}
+
+.app > .main-page > div > .forfun{
+	background-image: url('../assets/forfunBanner.jpg');
+	background-blend-mode: darken;
+	background-size: cover;
+}
+
+.app > .main-page > div > .pro{
+	background-image: url('../assets/proBanner.jpg');
+	background-blend-mode: darken;
+	background-size: cover;
+}
+
+.app > .server-page{
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-color: #33333390;
+}
+
+.app > .server-page > div{
+	display: flex;
+	margin-left: 90px;
+	margin-top: 20px;
+}
+
+.app > .server-page > button{
+	position: absolute;
+	margin-left: 15px;
+	border-style: outset;
+	color: #111;
+	background-color: #990000;
+	border-color: #4d0000;
+	border-width: 5px;
+	margin-top: 20px;
+	height: 50px;
+	width: 55px;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .server-page > .create-server{
+	position: absolute;
+	margin-left: 1017px;
+	border-style: outset;
+	color: #111;
+	background-color: #b37700;
+	border-color: #664400;
+	border-width: 5px;
+	margin-top: 30px;
+	height: 40px;
+	width: 100px;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .server-page > div > div > .server-box{
+	border-style: inset;
+	border-color: #666;
+	border-width: 7px;
+	width: 400px;
+	height: 320px;
+	background-color: #eee;
+	padding: 10px;
+}
+
+.app > .server-page > div > div > .chat{
+	width: 433px;
+	height: 250px;
+	background-color: #22222290;
+	margin-top: 10px;
+}
+
+.app > .server-page > div > div > .chat > .msg{
+	overflow: auto;
+	width: 100%;
+	height: 218px;
+	background-color: transparent;
+}
+
+.app > .server-page > div > div > .chat > .msg > div{
+	padding-top: 5px;
+	padding-left: 10px;
+	display: inline-block;
+	color: #fff;
+	font-size: 13px;
+}
+
+.app > .server-page > div > div > .chat > .msg > div > input{
+	background-color: transparent;
+	border: none;
+	font-size: 13px;
+	color: #fff;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .server-page > div > div > .chat > .msg::-webkit-scrollbar{
+  width: 10px;
+}
+
+.app > .server-page > div > div > .chat > .msg::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+.app > .server-page > div > div > .chat > .msg::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+  background-color: #333;
+}
+
+.app > .server-page > div > div > .chat > input{
+	width: 96.5%;
+	padding-left: 5px;
+	height: 20px;
+	background-color: transparent;
+	font-size: 13px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #333;
+	color: #fff;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .server-page > div > div > .servers-list{
+	border-style: inset;
+	border-color: #666;
+	border-width: 7px;
+	width: 560px;
+	height: 600px;
+	background-color: #eee;
+	margin-left: 50px;
+}
+
+.app > .server-page > div > div > .servers-list > .servers{
+	position: fixed;
+	margin-top: 0px;
+	width: 560px;
+	height: 544px;
+	overflow: auto;
+	background-color: transparent;
+}
+
+.app > .server-page > div > div > .servers-list > .servers::-webkit-scrollbar{
+  width: 10px;
+}
+
+.app > .server-page > div > div > .servers-list > .servers::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+.app > .server-page > div > div > .servers-list > .servers::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+  background-color: #333;
+}
+
+.app > .server-page > div > div > .servers-list > .servers > div{
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+.app > .create-server-page{
+	background-image: url('../assets/loginBG.png');
+	background-size: cover;
+	color: #ddd;
+	position: fixed;
+	z-index: 999;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+}
+
+.app > .create-server-page > div{
+	width: 400px;
+	height: 600px;
+	background-color: transparent;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	align-content: center;
+	text-align: center;
+}
+
+.app > .create-server-page > div > input{
+	margin-top: 15px;
+	padding: 10px;
+	height: 30px;
+	width: 80%;
+	border-style: inset;
+	background-color: #222;
+	color: #ddd;
+	border-color: #111;
+	border-width: 7px;
+	font-size: 17px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .create-server-page > div > select{
+	margin-top: 15px;
+	padding: 10px;
+	height: 65px;
+	width: 88%;
+	border-style: inset;
+	background-color: #222;
+	color: #ddd;
+	border-color: #111;
+	border-width: 7px;
+	font-size: 17px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .create-server-page > div > button{
+	border-style: outset;
+	border-color: #666;
+	background-color: #333;
+	color: #888;
+	margin-top: 20px;
+	height: 50px;
+	width: 80%;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.app > .create-server-page > button{
+	position: absolute;
+	margin-left: 15px;
+	border-style: outset;
+	color: #111;
+	background-color: #990000;
+	border-color: #4d0000;
+	border-width: 5px;
+	margin-top: 20px;
+	height: 50px;
+	width: 55px;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+}

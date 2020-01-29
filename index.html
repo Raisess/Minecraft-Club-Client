@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Minecraft Club</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/v4-shims.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		const app = {
+			version: '1.7.0 closed beta',
+			currentSes: '',
+			currentColor: ''
+		}
+
+		let colors = ['red', 'green', 'yellow', 'orange', 'blue', 'black', '#fff', 'purple', 'pink'];
+
+		app.currentColor = colors[Math.round(Math.random()*colors.length-1)];
+
+		console.log(app.currentColor);
+
+		const ROOT = 'http://localhost:1939';
+		const socket = io(ROOT);
+
+		let currentUserData;
+	</script>
+</head>
+<body>
+	<div class="app">
+		<div class="login-page" style="display: ;">
+			<img class="logo" src="./assets/mainLogo.png" />
+			<div class="signup" style="border-right: solid; border-color: #333;">
+				<h2>Crie sua conta</h2>
+				<div>
+					<input type="email" id="email" placeholder="Insira seu e-mail" />
+					<input type="text" id="nickname" placeholder="Escolha seu nickname" />
+					<input type="password" id="pass" placeholder="Insira sua senha" />
+					<button onclick="signup()">Criar</button>
+					<p style="padding-top: 20px;">Após criar sua conta faça login -></p>
+				</div>
+			</div>
+			<div class="signin">
+				<h2>Faça login</h2>
+				<div>
+					<input type="text" id="nicknameLogin" placeholder="Insira seu nickname" />
+					<input type="password" id="passLogin" placeholder="Insira sua senha" />
+					<button onclick="signin()">Entrar</button>
+				</div>
+			</div>
+		</div>
+		<div class="main-page" style="display: none;">
+			<span class="info" style="position: absolute; color: #fff; font-size: 10px;"></span>
+			<div class="title">
+				<img src="./assets/gameLogo.png" style="width: 60px; height: 60px" />
+				<h1>Modos de jogo</h1>
+				<div class="menu">
+					<button onclick="alert('Em breve...')">SKINS</button>
+				</div>
+			</div>
+			<div class="game-modes">
+				<div class="game lobby" onclick="getServers('lobby')" style="border-width: 4px; border-top-style: solid; border-color: blue; background-color: #88888890">
+					<i class="fas fa-star" style="color: blue"></i>
+					<h2>LOBBY</h2>
+				</div>
+				<div class="game forfun" onclick="getServers('forfun')" style="border-width: 4px; border-top-style: solid; border-color: green; background-color: #88888890">
+					<i class="fas fa-star" style="color: green"></i>
+					<h2>4FUN</h2>
+				</div>
+				<div class="game pro" onclick="getServers('pro')" style="border-width: 4px; border-top-style: solid; border-color: yellow; background-color: #88888890">
+					<i class="fas fa-star" style="color: yellow"></i>
+					<h2>PRO</h2>
+				</div>
+			</div>
+		</div>
+		<div class="server-page" style="display: none;">
+			<span class="info" style="position: absolute; color: #fff; font-size: 10px;"></span>
+			<button onclick="back()"> < </button>
+			<button class="create-server" onclick="$('.create-server-page').show();$('.server-page').hide();">CRIAR</button>
+			<div class="container">
+				<div class="column">
+					<div class="server-box"></div>
+					<div class="chat">
+						<div class="msg"></div>
+						<input type="text" id="chatInput" placeholder="Converse no chat global..." />
+					</div>
+				</div>
+				<div class="column">
+					<div class="servers-list">
+						<h3 id="serversListType" style="margin-left: 10px;"></h3>
+						<div class="servers"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="create-server-page" style="display: none;">
+			<button onclick="$('.server-page').show();$('.create-server-page').hide();"> < </button>
+			<div class="container">
+				<h1>Criar server</h1>
+				<input type="text" id="serverAddress" placeholder="* Endereço do servidor" />
+				<input type="text" id="serverName" placeholder="* Nome do servidor" />
+				<input type="text" id="serverDescription" placeholder="Descrição" />
+				<select id="serverType">
+			    <option value="internet">Internet</option>
+			    <option value="hamachi">Hamachi Lan</option>
+			  </select>
+				<input type="password" id="serverPass" placeholder="Senha do servidor" />
+				<button onclick="createServer()">Criar</button>
+			</div>
+		</div>
+	</div>
+	<script src="./js/sign.js"></script>
+	<script src="./js/servers.js"></script>
+	<script src="./js/chat.js"></script>
+</body>
+</html>
